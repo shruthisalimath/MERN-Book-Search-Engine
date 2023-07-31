@@ -7,13 +7,13 @@ const typeDefs = gql`
 type User {
     _id: ID!
     username: String!
-    email:string
+    email:String
     bookCount: Int
     savedBooks: [Book]
 }
 
 type Book {
-    bookId: Id!
+    bookId: ID!
     authors: [String]
     description: String
     image: String
@@ -47,3 +47,6 @@ type Auth{
 }
 
 `;
+
+// export the typeDefs
+module.exports = typeDefs;

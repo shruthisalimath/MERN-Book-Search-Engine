@@ -1,7 +1,7 @@
-const { NoUnusedFragmentsRule } = require("graphql");
+// import user model
 const { User } = require("../models");
 const { signToken } = require("../utils/auth");
-const { AuthenticationError } = require("appolo-server-express");
+const { AuthenticationError } = require("apollo-server-express");
 
 const resolvers = {
     Query: {
