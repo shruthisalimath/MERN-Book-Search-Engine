@@ -21,7 +21,7 @@ const SavedBooks = () => {
   const { loading, data } = useQuery(GET_ME);
   const userData = data?.me || {};
 
-  //// define remove book mutation
+  // define remove book mutation
   const [removeBook] = useMutation(REMOVE_BOOK);
 
   //const [userData, setUserData] = useState({});
@@ -41,10 +41,10 @@ const SavedBooks = () => {
     try {
       //call remove book
       const { data } = await removeBook({
-        variables: { bookId },
+        variables: { bookId: bookId },
       });
       console.log(data);
-
+      //userData = data;
       //upon success ,remove books's id from localstorage
       removeBookId(bookId);
     } catch (err) {
